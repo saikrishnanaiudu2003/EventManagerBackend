@@ -51,6 +51,8 @@ const auth = async (req, res, next) => {
         res.status(401).send('Unauthorized');
     }
 };
+
+app.get("/",(rew,res) => res.json("My Api Working"))
 app.post('/signup', async (req, res) => {
     const { name, email, password, role } = req.body;
 
