@@ -52,7 +52,7 @@ const auth = async (req, res, next) => {
     }
 };
 
-app.get("/",(rew,res) => res.json("My Api Working"))
+app.get("/",(req,res) => res.json("My Api is Working"))
 app.post('/signup', async (req, res) => {
     const { name, email, password, role } = req.body;
 
