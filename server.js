@@ -29,6 +29,8 @@ mongoose.connect('mongodb+srv://myAtlasDBUser:Sai123@myatlasclusteredu.qifwasp.m
     useUnifiedTopology: true,
 });
 
+app.get("/",(req,res)=> res.json("Api Working"))
+
 
 const auth = async (req, res, next) => {
     const token = req.header('Authorization')?.replace('Bearer ', '');
@@ -52,7 +54,7 @@ const auth = async (req, res, next) => {
     }
 };
 
-app.get("/",(req,res) => res.json("My Api is Working"))
+
 app.post('/signup', async (req, res) => {
     const { name, email, password, role } = req.body;
 
